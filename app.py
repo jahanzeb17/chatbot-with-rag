@@ -1,21 +1,16 @@
 import os
 import streamlit as st
 from dotenv import load_dotenv
-import tempfile
-import docx
 import io
 
-from PyPDF2 import PdfReader
 from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_chroma import Chroma
 from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.documents import Document
-import chromadb
 
 load_dotenv()
 
